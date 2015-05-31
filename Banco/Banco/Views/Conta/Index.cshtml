@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Criar Conta</h2>
+
+@using (Html.BeginForm("Index", "Dados"))
+{
+    @:Nome do Cliente @Html.TextBox("p.nome")<br>
+    @:Saldo inicial @Html.TextBox("c.saldo")<br>
+    @: Conta Corrente @Html.RadioButton("tipo", "corrente") Conta Poupança @Html.RadioButton("tipo", "poupanca")
+    <input type="submit" value="CRIAR">
+}
